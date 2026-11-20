@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRM Dashboard - Customers</title>
+    <link href="https://googleapis.com" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div>
+        <div class="logo">
+          <div class="logo-icon">O</div>
+          <span class="logo-text">Dashboard</span>
+          <span class="logo-version">v.01</span>
+        </div>
+
+        <nav class="nav-menu">
+          <a href="#" class="nav-item">
+            <span>🔑 Dashboard</span>
+          </a>
+          <a href="#" class="nav-item">
+            <span>📦 Product</span>
+            <span>›</span>
+          </a>
+          <a href="#" class="nav-item active">
+            <span>👤 Customers</span>
+            <span>›</span>
+          </a>
+          <a href="#" class="nav-item">
+            <span>💰 Income</span>
+            <span>›</span>
+          </a>
+          <a href="#" class="nav-item">
+            <span>🏷️ Promote</span>
+            <span>›</span>
+          </a>
+          <a href="#" class="nav-item">
+            <span>❓ Help</span>
+            <span>›</span>
+          </a>
+        </nav>
+      </div>
+
+      <div class="sidebar-bottom">
+        <div class="pro-card">
+          <p>Upgrade to PRO to get access all Features!</p>
+          <button class="pro-btn">Get Pro Now!</button>
+        </div>
+
+        <div class="user-profile">
+          <div class="user-info">
+            <img src="https://pravatar.cc" alt="Evano" />
+            <div>
+              <h4>Evano</h4>
+              <p>Project Manager</p>
+            </div>
+          </div>
+          <span class="chevron">⌄</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Top Header -->
+      <header class="top-header">
+        <h1>Hello Evano 👋🏼,</h1>
+        <div class="search-box top-search">
+          <span class="search-icon">🔍</span>
+          <input type="text" placeholder="Search" />
+        </div>
+      </header>
+
+      <!-- KPI Stats -->
+      <section class="stats-card">
+        <div class="stat-item">
+          <div class="stat-icon">👥</div>
+          <div class="stat-details">
+            <span class="stat-label">Total Customers</span>
+            <h2 class="stat-value">5,423</h2>
+            <p class="stat-trend up"><span>↑ 16%</span> this month</p>
+          </div>
+        </div>
+
+        <div class="stat-divider"></div>
+
+        <div class="stat-item">
+          <div class="stat-icon">👤</div>
+          <div class="stat-details">
+            <span class="stat-label">Members</span>
+            <h2 class="stat-value">1,893</h2>
+            <p class="stat-trend down"><span>↓ 1%</span> this month</p>
+          </div>
+        </div>
+
+        <div class="stat-divider"></div>
+
+        <div class="stat-item">
+          <div class="stat-icon">🖥️</div>
+          <div class="stat-details">
+            <span class="stat-label">Active Now</span>
+            <h2 class="stat-value">189</h2>
+            <div class="avatar-group">
+              <img src="https://pravatar.cc" alt="" />
+              <img src="https://pravatar.cc" alt="" />
+              <img src="https://pravatar.cc" alt="" />
+              <img src="https://pravatar.cc" alt="" />
+              <img src="https://pravatar.cc" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- All Customers Table -->
+      <section class="table-card">
+        <div class="table-header">
+          <div>
+            <h2>All Customers</h2>
+            <p class="subtitle">Active Members</p>
+          </div>
+
+          <div class="table-controls">
+            <div class="search-box table-search">
+              <span class="search-icon">🔍</span>
+              <input type="text" id="searchInput" placeholder="Search" />
+            </div>
+
+            <div class="sort-box">
+              <span>Sort by :</span>
+              <select id="sortSelect">
+                <option value="default">Newest</option>
+                <option value="name">Name (A-Z)</option>
+                <option value="status">Status</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Customer Name</th>
+                <th>Company</th>
+                <th>Phone Number</th>
+                <th>Email</th>
+                <th>Country</th>
+                <th class="text-center">Status</th>
+              </tr>
+            </thead>
+            <tbody id="customerTableBody"></tbody>
+          </table>
+        </div>
+
+        <div class="table-footer">
+          <p id="entriesInfo">Showing data 1 to 8 of 256K entries</p>
+          <div class="pagination" id="pagination">
+            <button class="page-btn">&lt;</button>
+            <button class="page-btn active">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn">3</button>
+            <button class="page-btn">4</button>
+            <span>...</span>
+            <button class="page-btn">40</button>
+            <button class="page-btn">&gt;</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
